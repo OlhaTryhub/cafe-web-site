@@ -1,0 +1,12 @@
+<nav id="navbar" class="navbar order-last order-lg-0">
+  <ul>
+    <li><a class="nav-link scrollto active" href="{% url 'index' %}">Home</a></li>
+    <li><a class="nav-link scrollto" href="{% url 'dish:food_list' dish_type='Breakfasts'%}">Food</a></li>
+    <li><a class="nav-link scrollto" href="{% url 'dish:food_list' dish_type='Coffee'%}">Drinks</a></li>
+    <li><a class="nav-link scrollto" href="{% url 'dish:food_list' dish_type='Cheescakes'%}">Desserts</a></li>
+    <li><a class="nav-link scrollto" href="{% url 'dish:food_list' dish_type='Kids Menu'%}">Kids Menu</a></li>
+    <li><a class="nav-link scrollto" href="#">Delivering</a></li>
+  </ul>
+  <i class="bi bi-list mobile-nav-toggle"></i>
+</nav>
+<a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Login</a>

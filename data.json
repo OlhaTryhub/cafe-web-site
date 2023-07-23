@@ -1,0 +1,1092 @@
+[
+  {
+    "model": "dish.menusection",
+    "pk": 1,
+    "fields": {
+      "name": "Food"
+    }
+  },
+  {
+    "model": "dish.menusection",
+    "pk": 2,
+    "fields": {
+      "name": "Drinks"
+    }
+  },
+  {
+    "model": "dish.menusection",
+    "pk": 3,
+    "fields": {
+      "name": "Desserts"
+    }
+  },
+  {
+    "model": "dish.menusection",
+    "pk": 4,
+    "fields": {
+      "name": "Kids Menu"
+    }
+  },
+  {
+    "model": "dish.dishtype",
+    "pk": 1,
+    "fields": {
+      "name": "Breakfasts",
+      "section": 1
+    }
+  },
+    {
+    "model": "dish.dishtype",
+    "pk": 2,
+    "fields": {
+      "name": "Waffles",
+      "section": 1
+    }
+  },
+    {
+    "model": "dish.dishtype",
+    "pk": 3,
+    "fields": {
+      "name": "Snacks",
+      "section": 1
+    }
+  },
+    {
+    "model": "dish.dishtype",
+    "pk": 4,
+    "fields": {
+      "name": "Salads",
+      "section": 1
+    }
+  },
+    {
+    "model": "dish.dishtype",
+    "pk": 5,
+    "fields": {
+      "name": "First dishes",
+      "section": 1
+    }
+  },
+    {
+    "model": "dish.dishtype",
+    "pk": 6,
+    "fields": {
+      "name": "Second dishes",
+      "section": 1
+    }
+  },
+  {
+    "model": "dish.dishtype",
+    "pk": 7,
+    "fields": {
+      "name": "Burgers",
+      "section": 1
+    }
+  },
+  {
+    "model": "dish.dishtype",
+    "pk": 8,
+    "fields": {
+      "name": "Coffee",
+      "section": 2
+    }
+  },
+  {
+    "model": "dish.dishtype",
+    "pk": 9,
+    "fields": {
+      "name": "Tea",
+      "section": 2
+    }
+  },
+  {
+    "model": "dish.dishtype",
+    "pk": 11,
+    "fields": {
+      "name": "Lemonades",
+      "section": 2
+    }
+  },
+  {
+    "model": "dish.dishtype",
+    "pk": 12,
+    "fields": {
+      "name": "Non-alcoholic cocktails",
+      "section": 2
+    }
+  },
+  {
+    "model": "dish.dishtype",
+    "pk": 13,
+    "fields": {
+      "name": "Alcoholic cocktails",
+      "section": 2
+    }
+  },
+  {
+    "model": "dish.dishtype",
+    "pk": 14,
+    "fields": {
+      "name": "Cheescakes",
+      "section": 3
+    }
+  },
+  {
+    "model": "dish.dishtype",
+    "pk": 15,
+    "fields": {
+      "name": "Cakes",
+      "section": 3
+    }
+  },
+  {
+    "model": "dish.dishtype",
+    "pk": 16,
+    "fields": {
+      "name": "Other",
+      "section": 3
+    }
+  },
+  {
+    "model": "dish.dishtype",
+    "pk": 17,
+    "fields": {
+      "name": "Kids Menu",
+      "section": 4
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 1,
+    "fields": {
+      "name": "Green pea toast with cream cheese",
+      "description": "Puree of green peas with the addition of cilantro, garlic, fresh herbs and lemon zest. Served on a buckwheat baguette fried in coconut oil with cream cheese, pickled red onion and microgreens",
+      "photo": "/static/assets/img/dish/sNYeMYw-FYqjyoN-FXHOVuv.jpg",
+      "type": 1,
+      "price": 190
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 2,
+    "fields": {
+      "name": "Tropical Bowl",
+      "description": "Smoothie bowl with mango, pineapple, banana, coconut puree and coconut milk. Garnish with banana, strawberry, coconut chips, granola, mint",
+      "photo": "/static/assets/img/dish/vxquFsF-TeKCCfe-JUutUiH.jpg",
+      "type": 1,
+      "price": 250
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 3,
+    "fields": {
+      "name": "Detox Bowl with Spirulina",
+      "description": "Banana, apple, avocado, celery stalk, fresh lemon, honey, spirulina",
+      "photo": "/static/assets/img/dish/QpBepvO-SPLRvCb-KSQguDl.jpg",
+      "type": 1,
+      "price": 250
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 4,
+    "fields": {
+      "name": "Breakfast Scramble with chicken fillet",
+      "description": "Gentle scramble with feta on Chapati bread. Served with chicken fillet, cherry tomatoes, corn and guacamole sauce",
+      "photo": "/static/assets/img/dish/GVbHBtB-FRxNqke-lFDjXDT.jpg",
+      "type": 1,
+      "price": 228
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 5,
+    "fields": {
+      "name": "Breakfast Scramble with shrimps",
+      "description": "Gentle scramble with feta on Chapati bread. Served with shrimp, cherry tomatoes, corn and guacamole sauce",
+      "photo": "/static/assets/img/dish/IhCgUgl-jjHBFaV-beTQQUP.jpg",
+      "type": 1,
+      "price": 190
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 6,
+    "fields": {
+      "name": "Eggs Benedict with hollandaise sauce",
+      "description": "Eggs Benedict with hollandaise sauce",
+      "photo": "/static/assets/img/dish/GrGlkCs-vxJdZnJ-KTZLmkj.jpg",
+      "type": 1,
+      "price": 180
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 7,
+    "fields": {
+      "name": "Avocado toast on a buckwheat baguette",
+      "description": "Avocado, concase tomatoes, garlic, fresh lime, cilantro, feta",
+      "photo": "/static/assets/img/dish/lCRsStR-bWzMCWw-mIJIecf.jpg",
+      "type": 1,
+      "price": 210
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 8,
+    "fields": {
+      "name": "Breakfast Feeling Happy",
+      "description": "Scrambled eggs, sausages, fried bacon, corn, baked tomato with cheese, toast",
+      "photo": "/static/assets/img/dish/RodCkvT-bdKkXAW-DyKXYYb.jpg",
+      "type": 1,
+      "price": 228
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 9,
+    "fields": {
+      "name": "Green waffle",
+      "description": "A waffle to which we add sublimated spinach. We serve it with a salad based on a mix of lettuce, edamame beans, zucchini, cherry tomatoes, and red onion, hot smoked salmon and a poached egg.",
+      "photo": "/static/assets/img/dish/LUkTyDN-oQeTcAi-cOJkckF.jpg",
+      "type": 2,
+      "price": 290
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 10,
+    "fields": {
+      "name": "Waffle with bacon, egg, pickled cucumber, corn and homemade mayonnaise",
+      "description": "Waffle with bacon, egg, pickled cucumber, corn and homemade mayonnaise",
+      "photo": "/static/assets/img/dish/pZGNmCb-dFuGYbW-bTGswLn.jpg",
+      "type": 2,
+      "price": 228
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 11,
+    "fields": {
+      "name": "Waffle with chicken fillet and caprese",
+      "description": "Waffle with chicken fillet and caprese",
+      "photo": "/static/assets/img/dish/FxgeCD-kCMWqJ-ClkiAFK.jpg",
+      "type": 2,
+      "price": 255
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 12,
+    "fields": {
+      "name": "Black waffle",
+      "description": "Black waffle with cuttlefish ink, salmon and cream on a cream cheese base",
+      "photo": "/static/assets/img/dish/ollvpkp-FeTyWpF-rBDwGQw.jpg",
+      "type": 2,
+      "price": 325
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 13,
+    "fields": {
+      "name": "Waffle Three Milk",
+      "description": "with peanut paste and banana",
+      "photo": "/static/assets/img/dish/PwhhMRe-HIedCNv-sunVhab.jpg",
+      "type": 2,
+      "price": 270
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 14,
+    "fields": {
+      "name": "Chocolate Waffle",
+      "description": "with banana and Nutella",
+      "photo": "/static/assets/img/dish/CXlFQS-QkTraHr-ofIJyKA.jpg",
+      "type": 2,
+      "price": 225
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 15,
+    "fields": {
+      "name": "Berry Waffle",
+      "description": "With berry sauce and cream based on cream cheese",
+      "photo": "/static/assets/img/dish/bTHPjGc-fHbxFs-lDsbDBv.jpg",
+      "type": 2,
+      "price": 255
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 16,
+    "fields": {
+      "name": "Spring roll with shrimp",
+      "description": "Rice paper rolls with shrimp, cucumber, arugula, red onion, cilantro. Serve with sweet chili sauce.",
+      "photo": "/static/assets/img/dish/ZvGlcZR-gOiFwEv-WwtyWbU.jpg",
+      "type": 3,
+      "price": 270
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 17,
+    "fields": {
+      "name": "Spring roll with lightly salted salmon",
+      "description": "Rice paper rolls with lightly salted salmon, funchoza, fresh cucumber, carrot, salad mix, cilantro. Serve with sweet chili and soy sauce.",
+      "photo": "/static/assets/img/dish/wbPtdkZ-wvubHdU-CJWuCkf.jpg",
+      "type": 3,
+      "price": 220
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 18,
+    "fields": {
+      "name": "Tacos with shrimp and avocado-egg salad",
+      "description": "With shrimp and avocado-egg salad",
+      "photo": "/static/assets/img/dish/JFOnqx-koJeHLx-fZbDCCH.jpg",
+      "type": 3,
+      "price": 320
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 19,
+    "fields": {
+      "name": "Mexican-style tacos",
+      "description": "With guacamole and beef",
+      "photo": "/static/assets/img/dish/MKpxuCr-GbAgJUB-bqpiIwv.jpg",
+      "type": 3,
+      "price": 295
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 20,
+    "fields": {
+      "name": "Guacamole with Chapati breads",
+      "description": "Guacamole with Chapati breads",
+      "photo": "/static/assets/img/dish/XGyJCl-GyehJGX-iGxzrI.jpg",
+      "type": 3,
+      "price": 135
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 21,
+    "fields": {
+      "name": "Pate from chicken liver and croutons",
+      "description": "Pate from chicken liver and croutons from toasted bread of our own production. Serve with fresh cucumber and carrot",
+      "photo": "/static/assets/img/dish/kBpoNBT-JbnQSMa-dsxugMJ.jpg",
+      "type": 3,
+      "price": 90
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 22,
+    "fields": {
+      "name": "Greek salad with Kalamata olives",
+      "description": "Greek salad with Kalamata olives",
+      "photo": "/static/assets/img/dish/KPsmGA-SgrkCb-gQyMbJZ.jpg",
+      "type": 4,
+      "price": 190
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 23,
+    "fields": {
+      "name": "Salad with tuna",
+      "description": "Tuna, egg, cherry tomatoes, red onion, mixed salad, base dressing olive oil and French mustard",
+      "photo": "/static/assets/img/dish/OdFVRGM-eUPlbUM-Idefwgc.jpg",
+      "type": 4,
+      "price": 195
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 24,
+    "fields": {
+      "name": "Grilled salad with veal",
+      "description": "Veal, zucchini, bell pepper, red onion, mozzarella, fried in a grill pan, sun-dried tomatoes, mixed salad. Season with sauce oyster-soy",
+      "photo": "/static/assets/img/dish/DSdWFC-bkUgWHw-ZxuYfyl.jpg",
+      "type": 4,
+      "price": 240
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 25,
+    "fields": {
+      "name": "Caesar",
+      "description": "Salad with chicken and bacon or shrimp",
+      "photo": "/static/assets/img/dish/GIKKzME-CrpJDDI-ljVdaoc.jpg",
+      "type": 4,
+      "price": 250
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 26,
+    "fields": {
+      "name": "Cobb salad",
+      "description": "Chicken fillet, fried bacon, romaine lettuce, avocado, Dorblu cheese, tomatoes cherry, egg, green onion, dressing based on balsamic cream and soy sauce",
+      "photo": "/static/assets/img/dish/ICxtkhZ-mdIMea-KdGkauI.jpg",
+      "type": 4,
+      "price": 275
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 27,
+    "fields": {
+      "name": "Okroshka",
+      "description": "Serve with toasted bread, mustard and lemon",
+      "photo": "/static/assets/img/dish/mXpnXWl-uCcfqFG-NzepkkD.jpg",
+      "type": 5,
+      "price": 230
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 28,
+    "fields": {
+      "name": "Chicken soup",
+      "description": "Chicken soup with noodles and egg",
+      "photo": "/static/assets/img/dish/BgxHpJl-FJGpNmm-qUJZDPo.jpg",
+      "type": 5,
+      "price": 138
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 29,
+    "fields": {
+      "name": "Creamy mushroom soup",
+      "description": "Mushrooms, cream, onion, buckwheat baguette chips",
+      "photo": "/static/assets/img/dish/nMhJydC-xZzEeR-BFlSDIl.jpg",
+      "type": 5,
+      "price": 150
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 30,
+    "fields": {
+      "name": "Fish curry with coconut milk rice and mango salsa",
+      "description": "Fish in coconut-cream curry sauce, rice boiled in coconut milk, mango salsa",
+      "photo": "/static/assets/img/dish/FHDGoGG-oiETVIl-DMuksjV.jpg",
+      "type": 6,
+      "price": 250
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 31,
+    "fields": {
+      "name": "Bowl with shrimp and mango salsa",
+      "description": "Shrimp, mango salsa, avocado, edamame beans, rice noodles, fried halloumi, balsamic-soy sauce",
+      "photo": "/static/assets/img/dish/sGOcKXf-egFtXQI-bQuoIeH.jpg",
+      "type": 6,
+      "price": 350
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 32,
+    "fields": {
+      "name": "Bowl with chicken and rice",
+      "description": "Chicken in creamy coconut sauce, rice boiled in coconut milk, broccoli, red cabbage, corn, cherry tomatoes",
+      "photo": "/static/assets/img/dish/bQTPUaV-IYcJiaK-maTDmRL.jpg",
+      "type": 6,
+      "price": 220
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 33,
+    "fields": {
+      "name": "Beef stroganoff",
+      "description": "Mashed potatoes with pieces of beef in a creamy sauce. Serve with gherkins and capers",
+      "photo": "/static/assets/img/dish/VYRkpIE-zRljWJC-ILATvwI.jpg",
+      "type": 6,
+      "price": 220
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 34,
+    "fields": {
+      "name": "Asian bowl",
+      "description": "with rice noodles, tiger prawns shrimp, bell pepper, chili, zucchini, egg pancake, cilantro and a mixture of oyster, soy and mango sauces",
+      "photo": "/static/assets/img/dish/GgHVSob-pTwyXPC-YgclfBy.jpg",
+      "type": 6,
+      "price": 320
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 35,
+    "fields": {
+      "name": "Bowl with funchose",
+      "description": "Funchoza, shiitake mushrooms, bell pepper, zucchini, dressing based on teriyaki and soy sauce",
+      "photo": "/static/assets/img/dish/mJGoeYk-LRFfElD-qOBXTIC.jpg",
+      "type": 6,
+      "price": 250
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 36,
+    "fields": {
+      "name": "Dumplings with seafood",
+      "description": "Dumplings stuffed with shrimp, mussels and vegetables",
+      "photo": "/static/assets/img/dish/UTnzGDp-RmWAkeM-SpQmedl.jpg",
+      "type": 6,
+      "price": 320
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 37,
+    "fields": {
+      "name": "Cheeseburger Feeling Happy",
+      "description": "We cook with beef cutlet. Served with barbecue sauce and French fries",
+      "photo": "/static/assets/img/dish/AsbBnHp-wcGOpkk-TCOeBNJ.jpg",
+      "type": 7,
+      "price": 295
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 38,
+    "fields": {
+      "name": "Chicken burger",
+      "description": "With chicken cutlet and tartar sauce. Serve with French fries",
+      "photo": "/static/assets/img/dish/MglLIXD-btngCdG-rtbiJWo.jpg",
+      "type": 7,
+      "price": 240
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 39,
+    "fields": {
+      "name": "Chicken soup for kids",
+      "description": "Soup with chicken meatballs, noodles and quail eggs",
+      "photo": "/static/assets/img/dish/CVEsgJm-xGqIfgt-SQAWaHQ.jpg",
+      "type": 17,
+      "price": 95
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 40,
+    "fields": {
+      "name": "Mashed potatoes with chicken meatballs",
+      "description": "Mashed potatoes with chicken meatballs",
+      "photo": "/static/assets/img/dish/dKkBopb-gbREGXA-wfkgqOm.jpg",
+      "type": 17,
+      "price": 135
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 41,
+    "fields": {
+      "name": "Mini burger",
+      "description": "With chicken fillet with cheese, pickled cucumber Served with french fries and ketchup",
+      "photo": "/static/assets/img/dish/bMCvfuQ-vyvawy-pnoGmkI.jpg",
+      "type": 17,
+      "price": 145
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 42,
+    "fields": {
+      "name": "Strawberry cheesecake",
+      "description": "Delicate strawberry mousse with strawberry jelly and whole strawberries in lemon jelly. The base is made of home-made shortbread",
+      "photo": "/static/assets/img/dish/GmVneuw-mFrDFZK-JupRQnY.jpg",
+      "type": 14,
+      "price": 105
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 43,
+    "fields": {
+      "name": "Ellie's Cheesecake",
+      "description": "Signature mousse cheesecake based on cream cheese and cream with hints of orange peel. The base is made of home-made shortbread.",
+      "photo": "/static/assets/img/dish/VMLhbIy-JyyCISF-SDDGHVw.jpg",
+      "type": 14,
+      "price": 95
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 44,
+    "fields": {
+      "name": "Cheesecake New York",
+      "description": "Cheesecake baked on the basis of cream cheese with the addition of fresh lemon. The base is made from chocolate cookies of our own production",
+      "photo": "/static/assets/img/dish/uzfbolA-urJAnmF-dboHmjl.jpg",
+      "type": 14,
+      "price": 115
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 45,
+    "fields": {
+      "name": "Mango-Passion Fruit Cheesecake",
+      "description": "Gentle mousse texture with natural mango and passion fruit puree. In the aftertaste you will feel notes of lime peel.",
+      "photo": "/static/assets/img/dish/JucRegQ-ujHybxM-bkVAoDt.jpg",
+      "type": 14,
+      "price": 135
+    }
+  },{
+    "model": "dish.dish",
+    "pk": 46,
+    "fields": {
+      "name": "Oreo cheesecake",
+      "description": "The basis is Oreo cookie crumbs, mascarpone-based cream, salted caramel of our own production",
+      "photo": "/static/assets/img/dish/uXGXETo-btCBcJl-UhPAnTd.jpg",
+      "type": 14,
+      "price": 95
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 47,
+    "fields": {
+      "name": "Pina Colada",
+      "description": "Mousse with the addition of puree and coconut shavings, pieces of pineapple inside, coconut biscuit, mirror glaze based on white chocolate",
+      "photo": "/static/assets/img/dish/RWGHDWb-eBXoVDl-XdsuJsD.jpg",
+      "type": 15,
+      "price": 140
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 48,
+    "fields": {
+      "name": "Monastery hut",
+      "description": "Tubes of crispy shortcrust pastry, filled with cherry, sour cream",
+      "photo": "/static/assets/img/dish/rwjkSQD-FVefKzd-wtobubi.jpg",
+      "type": 15,
+      "price": 110
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 49,
+    "fields": {
+      "name": "Berry tartlet",
+      "description": "Sand basket, cream based on mascarpone, berries",
+      "photo": "/static/assets/img/dish/vmvMvIk-HWQrHkq-KQeXRDp.jpg",
+      "type": 15,
+      "price": 90
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 50,
+    "fields": {
+      "name": "Napoleon",
+      "description": "Napoleon cake with champagne-based creme mousse and banana salted caramel",
+      "photo": "/static/assets/img/dish/lFgCxNH-HfCUkoR-zOGnfir.jpg",
+      "type": 15,
+      "price": 85
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 51,
+    "fields": {
+      "name": "Lime tartlet with meringue",
+      "description": "Shortbread filled with custard with fresh lime, burnt meringue",
+      "photo": "/static/assets/img/dish/okkIxEO-bTHLsJn-bQYpIgJ.jpg",
+      "type": 15,
+      "price": 95
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 52,
+    "fields": {
+      "name": "Sugar-free vegan candies",
+      "description": "We prepare it on the basis of grated cocoa, dates, nuts. Flavors - orange, coffee, cardamom",
+      "photo": "/static/assets/img/dish/YvWGiTP-vHLCQFH-YDeLDHW.jpg",
+      "type": 16,
+      "price": 40
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 53,
+    "fields": {
+      "name": "Pavlova with berries",
+      "description": "Meringue, cream based on mascarpone, berries",
+      "photo": "/static/assets/img/dish/eVSWiiH-JLXsWPP-dtXnxDc.jpg",
+      "type": 16,
+      "price": 110
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 54,
+    "fields": {
+      "name": "Salted caramel eclair",
+      "description": "Eclair filled with cream based on cream cheese and salted caramel of our own production",
+      "photo": "/static/assets/img/dish/eppUtLD-wMtKegt-WebFkSj.jpg",
+      "type": 16,
+      "price": 95
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 55,
+    "fields": {
+      "name": "Lean croissant with cherry",
+      "description": "Lean croissant with cherry",
+      "photo": "/static/assets/img/dish/kTbkRN-CccZxtV-WtZNgJJ.jpg",
+      "type": 16,
+      "price": 25
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 56,
+    "fields": {
+      "name": "Macarons",
+      "description": "Flavors: Chocolate-Dorblue, Baileys, Mint-Strawberry, Raspberry-Rose, Matcha",
+      "photo": "/static/assets/img/dish/SbGFKpf-kiTwxZH-uEOkBGS.jpg",
+      "type": 16,
+      "price": 40
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 57,
+    "fields": {
+      "name": "Bento cake",
+      "description": "Filling Red velvet or Banana-salted caramel. We accept orders for a day.",
+      "photo": "/static/assets/img/dish/LXIuIhF-TjkPdGO-DNIYLwW.jpg",
+      "type": 16,
+      "price": 300
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 58,
+    "fields": {
+      "name": "Coffee looks",
+      "description": "Coffee with two scoops of ice cream and chocolate crumble",
+      "photo": "/static/assets/img/dish/kPzRdQJ-wBhBylX-hEWWcAY.jpg",
+      "type": 8,
+      "price": 90
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 59,
+    "fields": {
+      "name": "Coffee with Coca-Cola and lime",
+      "description": "Coffee with Coca-Cola and lime",
+      "photo": "/static/assets/img/dish/FYWeTxB-IqUGNin-pprGNJl.jpg",
+      "type": 8,
+      "price": 80
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 60,
+    "fields": {
+      "name": "Espresso tonic",
+      "description": "Espresso tonic",
+      "photo": "/static/assets/img/dish/FRVjACO-CBHCSVP-DApCzdI.jpg",
+      "type": 8,
+      "price": 95
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 61,
+    "fields": {
+      "name": "Coffee with orange juice and tonic",
+      "description": "Coffee with orange juice and tonic",
+      "photo": "/static/assets/img/dish/zdQJPYC-IyfhKSy-yJPVDJn.jpg",
+      "type": 8,
+      "price": 90
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 62,
+    "fields": {
+      "name": "Thai coffee",
+      "description": "Cold coffee with milk",
+      "photo": "/static/assets/img/dish/nCaAqYD-cIJyxub-PBXJCaA.jpg",
+      "type": 8,
+      "price": 90
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 63,
+    "fields": {
+      "name": "Matcha orange",
+      "description": "Matcha orange with orange juice",
+      "photo": "/static/assets/img/dish/orange_latte.png",
+      "type": 8,
+      "price": 105
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 64,
+    "fields": {
+      "name": "Pineapple-Pear-Mint",
+      "description": "Tea with natural fruits",
+      "photo": "/static/assets/img/dish/Pineapple-Pear-Mint.jpg",
+      "type": 9,
+      "price": 135
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 65,
+    "fields": {
+      "name": "Raspberry-Passionate",
+      "description": "Raspberries with natural passion fruit puree",
+      "photo": "/static/assets/img/dish/Raspberry-Passionate.jpg",
+      "type": 9,
+      "price": 110
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 66,
+    "fields": {
+      "name": "Sea buckthorn",
+      "description": "With rosemary, orange and honey",
+      "photo": "/static/assets/img/dish/buckthorn.jpg",
+      "type": 9,
+      "price": 100
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 67,
+    "fields": {
+      "name": "Herbal",
+      "description": "With lavender, mint and lemon balm",
+      "photo": "/static/assets/img/dish/herbal.jpg",
+      "type": 9,
+      "price": 70
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 68,
+    "fields": {
+      "name": "Immune booster",
+      "description": "With ginger, spices and citrus fruits",
+      "photo": "/static/assets/img/dish/immune-booster.jpg",
+      "type": 9,
+      "price": 110
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 69,
+    "fields": {
+      "name": "Coconut-lychee lemonade",
+      "description": "Lemonade with the addition of natural pureed coconut and lychee",
+      "photo": "/static/assets/img/dish/CkTEBkF-rORslEN-xGEsCTR.jpg",
+      "type": 11,
+      "price": 130
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 70,
+    "fields": {
+      "name": "Lemonade Rucola-Lime",
+      "description": "Lemonade with arugula and fresh lime",
+      "photo": "/static/assets/img/dish/xyvQMWR-HDekvbC-nbZNTRd.jpg",
+      "type": 11,
+      "price": 90
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 71,
+    "fields": {
+      "name": "Matcha Lemonade",
+      "description": "Matcha with tonic and fresh lemon",
+      "photo": "/static/assets/img/dish/bGOLTkI-JHAwElH-zjZlCcE.jpg",
+      "type": 11,
+      "price": 90
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 72,
+    "fields": {
+      "name": "Lemonade Strawberry-Mint",
+      "description": "Lemonade Strawberry-Mint",
+      "photo": "/static/assets/img/dish/dbJePoS-eqBCHmD-bsXGcsN.jpg",
+      "type": 11,
+      "price": 90
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 73,
+    "fields": {
+      "name": "Lemonade Passion Fruit Lime",
+      "description": "Lemonade Passion Fruit Lime",
+      "photo": "/static/assets/img/dish/kdbGEjb-bZDPfHp-AArpbFe.jpg",
+      "type": 11,
+      "price": 110
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 74,
+    "fields": {
+      "name": "Lemonade Pineapple-Pear",
+      "description": "Lemonade Pineapple-Pear",
+      "photo": "/static/assets/img/dish/JDlHykA-HXTCPyA-FfgncDF.jpg",
+      "type": 11,
+      "price": 110
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 75,
+    "fields": {
+      "name": "Barbie girl",
+      "description": "Pink lemonade, raspberry syrup, fresh lemon, raspberry",
+      "photo": "/static/assets/img/dish/bxIxIkm-ThqxhDy-cXHGQee.jpg",
+      "type": 12,
+      "price": 130
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 76,
+    "fields": {
+      "name": "Tropical treasure",
+      "description": "Mango puree, coconut milk, banana",
+      "photo": "/static/assets/img/dish/JmildXa-mHbYsiI-KITBtGL.jpg",
+      "type": 12,
+      "price": 165
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 77,
+    "fields": {
+      "name": "Maldivian island",
+      "description": "Passion fruit puree, fresh orange, fresh lemon, sugar syrup",
+      "photo": "/static/assets/img/dish/exzFLvR-uQFXtih-cbzckvf.jpg",
+      "type": 12,
+      "price": 130
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 78,
+    "fields": {
+      "name": "3M - Mexican Mango Mojito",
+      "description": "Havana Club 3 Anos rum, mango puree, chili pepper, mint, lime, sugar syrup, sparkling water, ice",
+      "photo": "/static/assets/img/dish/HQqDhDF-yenaabV-szWJBIj.jpg",
+      "type": 13,
+      "price": 240
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 79,
+    "fields": {
+      "name": "Elina",
+      "description": "Lillet, Gordon's raspberry gin, lychee, pink lemonade",
+      "photo": "/static/assets/img/dish/aDFqvTz-dsGskhB-FkDrUyd.jpg",
+      "type": 13,
+      "price": 190
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 80,
+    "fields": {
+      "name": "Surfer’s Dream",
+      "description": "Jack Daniel's Honey, passion fruit puree, pear syrup, fresh lemon, albumin, ice",
+      "photo": "/static/assets/img/dish/yhkgbhm-YlSwZLR-yUxJHbV.jpg",
+      "type": 13,
+      "price": 240
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 81,
+    "fields": {
+      "name": "Lone Wolf",
+      "description": "Men's cocktail based on Jim Beam White label bourbon, Jagermeister, cardamom syrup, fresh lemon, burnt cinnamon stick, ice",
+      "photo": "/static/assets/img/dish/SbDUFzK-NkwdNTd-wNCObGi.jpg",
+      "type": 13,
+      "price": 270
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 82,
+    "fields": {
+      "name": "Limoncello Spritz",
+      "description": "Limoncello liqueur, Prosecco, tonic",
+      "photo": "/static/assets/img/dish/JDdIZRd-paecSDo-bIcICTJ.jpg",
+      "type": 13,
+      "price": 240
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 83,
+    "fields": {
+      "name": "Girls’ Talks",
+      "description": "Champagne, strawberries, pink lemonade, sugar syrup, cotton candy",
+      "photo": "/static/assets/img/dish/BSekFcG-Tgaqtcz-lwNzxVY.jpg",
+      "type": 13,
+      "price": 250
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 84,
+    "fields": {
+      "name": "Lillet Sangria",
+      "description": "Lillet, seasonal fruits, mint, syrup, sparkling water, ice",
+      "photo": "/static/assets/img/dish/EsCIhYf-EbJEgow-aUCCNik.jpg",
+      "type": 13,
+      "price": 190
+    }
+  },
+  {
+    "model": "dish.dish",
+    "pk": 85,
+    "fields": {
+      "name": "Secret Obsession",
+      "description": "Absolut vodka, pear syrup, fresh lemon, spicy syrup, easy foam",
+      "photo": "/static/assets/img/dish/rWlGjmd-jedSFFO-ZGsqAAo.jpg",
+      "type": 13,
+      "price": 180
+    }
+  }
+]
