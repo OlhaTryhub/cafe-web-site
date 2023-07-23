@@ -5,9 +5,9 @@ from django.views import generic
 from dish.models import Dish, DishType
 
 
-def food_type_view(request: HttpRequest, dish_type: str):
+def dish_type_view(request: HttpRequest, dish_type: str):
     dish_list = Dish.objects.filter(type__name=dish_type)
-    type_obj = DishType.objects.get(name=dish_type)
+    type_obj = DishType.objects.filter(name=dish_type).first()
     section_name = type_obj.section.name
     type_list = DishType.objects.filter(section__name=section_name)
 
@@ -18,4 +18,9 @@ def food_type_view(request: HttpRequest, dish_type: str):
     }
 
     return render(request, "dish/dish_list.html", context=context)
+
+
+class DishDetailView(generic.DetailView):
+    model = Dish
+
 

@@ -24,7 +24,7 @@
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="menu-flters">
               {% for type in type_list %}
-                <a href="{% url 'dish:food_list' dish_type=type.name %}">
+                <a href="{% url 'dish:dish-list' dish_type=type.name %}">
                   <button type="submit" class="button" name="food" value="type.id">{{ type.name }}
                   </button>
                 </a>
@@ -38,7 +38,7 @@
           <div class="col-lg-6 menu-item filter-starters">
             <img src={{ dish.photo }} class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#">{{ dish.name }}</a><span>{{ dish.price }} UAH</span>
+              <a href="{% url 'dish:dish-detail' pk=dish.id %}">{{ dish.name }}</a><span>{{ dish.price }} UAH</span>
             </div>
             <div class="menu-ingredients">
               {{ dish.description }}

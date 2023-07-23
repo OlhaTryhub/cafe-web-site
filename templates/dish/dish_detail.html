@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}
+<title>{{ dish.name }} Details</title>
+{% endblock %}
+{% block content %}
+<section id="specials" class="specials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <div>
+        <br>
+        <br>
+            <br>
+            <br>
+            </div>
+          <h2>{{ dish.type.section.name }}</h2>
+          <p>{{ dish.name }}</p>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Description</h3>
+                    <p>{{ dish.description }}</p>
+                    <h4>{{ dish.price }} UAH</h4>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src={{ dish.photo }} alt={{ dish.name }} class="img-fluid">
+                  </div>
+                </div>
+                <div class="row">
+                  <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Add to order</a>
+                  {% if user.is_authenticated %}
+                    <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Login</a>
+                  {% endif %}
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+{% endblock %}
