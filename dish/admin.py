@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from dish.models import Dish, DishType, MenuSection
+
+admin.site.register(Dish)
+admin.site.register(DishType)
+admin.site.register(MenuSection)
