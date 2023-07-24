@@ -25,7 +25,7 @@
             <ul id="menu-flters">
               {% for type in type_list %}
                 <a href="{% url 'dish:dish-list' dish_type=type.name %}">
-                  <button type="submit" class="button" name="food" value="type.id">{{ type.name }}
+                    <button type="submit" class="button" name="food" value="type.id">{{ type.name }}
                   </button>
                 </a>
               {% endfor %}
