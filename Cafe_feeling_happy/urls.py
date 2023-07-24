@@ -9,5 +9,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", index, name="index"),
     path("dish/", include("dish.urls", namespace="dish")),
+    path("user/", include("user.urls", namespace="user")),
     path("accounts/", include("django.contrib.auth.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

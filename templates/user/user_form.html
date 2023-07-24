@@ -1,0 +1,82 @@
+{% extends "input_form_base.html" %}
+
+{% block title %}
+{% if user.is_authenticated %}
+  <title>Update {{ user.username }} data</title>
+{% else %}
+  <title>Registration</title>
+{% endif %}
+{% endblock %}
+{% block page_title %}
+Registration
+{% endblock %}
+{% block form %}
+  <form method="post" action="" novalidate>
+    {% csrf_token %}
+    <div class="form-group">
+      {% if form.errors.username %}
+        {% for message in form.errors.username %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+      <input type="text" name="username" class="form-control" placeholder="Username" required>
+    </div>
+    <div class="form-group">
+      {% if form.errors.password1 %}
+        {% for message in form.errors.password1 %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+      <input id="password-field1" class="form-control" type="password" name="password1" class="form-control" placeholder="Password" required>
+      <span toggle="#password-field1" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+    </div>
+    <div class="form-group">
+      {% if form.errors.password2 %}
+        {% for message in form.errors.password2 %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+      <input id="password-field2" type="password" name="password2" class="form-control" placeholder="Confirm password" required>
+      <span toggle="#password-field2" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+    </div>
+    <div class="form-group">
+      {% if form.errors.first_name %}
+        {% for message in form.errors.first_name %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+      <input type="text" name="first_name" class="form-control" placeholder="First name" required>
+    </div>
+    <div class="form-group">
+      {% if form.errors.last_name %}
+        {% for message in form.errors.last_name %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+      <input type="text" name="last_name" class="form-control" placeholder="Last name" required>
+    </div>
+    <div class="form-group">
+      {% if form.errors.email %}
+        {% for message in form.errors.email %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+      <input type="text" name="email" class="form-control" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+      {% if form.errors.first_name %}
+        {% for message in form.errors.first_name %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+      <button type="submit" class="btn-book animated fadeInUp" value="Login">Registrate</button>
+    </div>
+  </form>
+    <br>
+    <p class="mb-4 text-center">Already have an account?</p>
+  <div class="form-group">
+    <a href="{% url 'login' %}">
+      <button type="submit" class="btn-book animated fadeInUp scrollto">Login</button>
+    </a>
+  </div>
+{% endblock %}

@@ -1,64 +1,37 @@
-<!doctype html>
-<html lang="en">
-  <head>
-  	<title>Feeling Happy Login</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% extends "input_form_base.html" %}
 
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+{% block title %}
+  <title>Feeling Happy Login</title>
+{% endblock %}
 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  {% load static %}
-	<link href="{% static 'assets/css/style_login.css' %}" rel="stylesheet">
-
-	</head>
-	<section id="hero" class="d-flex align-items-center">
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Login</h2>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-md-6 col-lg-4">
-					<div class="login-wrap p-0">
-            {% if next %}
-              <h3 class="mb-4 text-center">Please login to see this page.</h3>
-            {% endif %}
-		      	<h3 class="mb-4 text-center">Have an account?</h3>
-            {% if form.errors %}
-              <p>Your username and password didn't match. Please try again.</p>
-            {% endif %}
-		      	<form method="post" action="{% url 'login' %}" class="signin-form">
-              {% csrf_token %}
-		      		<div class="form-group">
-		      			<input type="text" name="username" class="form-control" placeholder="Username" required>
-		      		</div>
-	            <div class="form-group">
-	              <input id="password-field" type="password" name="password" class="form-control" placeholder="Password" required>
-	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-	            </div>
-	            <div class="form-group">
-	            	<button type="submit" class="btn-book animated fadeInUp scrollto" value="Login">Login</button>
-	            </div>
-	          </form>
-            <div class="form-group">
-              <a href="#registration">
-                <button type="submit" class="btn-book animated fadeInUp scrollto">Registration</button>
-              </a>
-            </div>
-		      </div>
-				</div>
-			</div>
-		</div>
-	</section>
-    </section>
-
-	<script src="/static/assets/js/login/jquery.min.js"></script>
-  <script src="/static/assets/js/login/popper.js"></script>
-  <script src="/static/assets/js/login/bootstrap.min.js"></script>
-  <script src="/static/assets/js/login/main.js"></script>
-
-	</body>
-</html>
+{% block page_title %}
+Login
+{% endblock %}
+{% block form %}
+{% if next %}
+  <h3 class="mb-4 text-center">Please login to see this page.</h3>
+{% endif %}
+{% if form.errors %}
+  <p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+<form method="post" action="" novalidate>
+  {% csrf_token %}
+  <div class="form-group">
+    <input type="text" name="username" class="form-control" placeholder="Username" required>
+  </div>
+  <div class="form-group">
+    <input id="password-field" type="password" name="password" class="form-control" placeholder="Password" required>
+    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn-book animated fadeInUp scrollto" value="Login">Login</button>
+  </div>
+</form>
+  <br>
+  <p class="mb-4 text-center">Don't have an account?</p>
+<div class="form-group">
+  <a href="{% url 'user:registration' %}">
+    <button type="submit" class="btn-book animated fadeInUp scrollto">Registration</button>
+  </a>
+</div>
+{% endblock %}
