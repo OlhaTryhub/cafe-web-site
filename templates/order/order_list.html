@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}
+  <title>My orders</title>
+  {% endblock %}
+{% block content %}
+<main id="main">
+  <section class="inner-page">
+    <div class="container">
+      <p><div><br><br></div>
+        <section id="menu" class="menu section-bg">
+          <div class="container" data-aos="fade-up">
+            <div class="section-title"><h2>My orders</h2></div>
+            <div class="menu-container" data-aos="fade-up" data-aos-delay="200">
+              {% for order in order_list %}
+                <div class="col-lg-6 menu-item filter-starters">
+                  <h4>Order number: <a href="{% url 'order:order-detail' pk=order.id%}">{{ order.id }}</a></h4>
+                  <div class="order-row">
+                    <p><i>total amount:</i> <b>{{ order.total_amount }}</b> UAH</p>
+                    <p><i>created at:</i> <b>{{ order.making_datetime.day }}-{{ order.making_datetime.month }}-{{ order.making_datetime.year }}, {{ order.making_datetime.hour }}:{{ order.making_datetime.minute }}</b></p>
+                    <p><i>status:</i> <b>{{ order.status.name }}</b></p>
+                  </div>
+                </div>
+                {% empty %}
+                <h4>There is no orders yet</h4>
+              {% endfor %}
+            </div>
+          </div>
+        </section>
+      </p>
+    </div>
+  </section>
+</main>
+{% endblock %}

@@ -34,12 +34,11 @@
                 {% if not user.is_authenticated %}
                   <a href="{% url 'login' %}" class="book-a-table-btn scrollto d-none d-lg-flex">Add to order</a>
                 {% else %}
-{#                  <a href="{% url 'confirm-dish-amount' %}" class="book-a-table-btn scrollto d-none d-lg-flex">Add to order</a>#}
-                  <a href="#confirm-amount" class="book-a-table-btn scrollto d-none d-lg-flex">Add to order</a>
+                  <a href="{% url 'dish:add-to-order' pk=dish.id %}" class="book-a-table-btn scrollto d-none d-lg-flex">Add to order</a>
                 {% endif %}
                   {% if user.is_superuser %}
                     <a href="#delete-dish" class="book-a-table-btn scrollto d-none d-lg-flex">Delete dish</a>
-                    <a href="#delete-dish" class="book-a-table-btn scrollto d-none d-lg-flex">Update dish</a>
+                    <a href="#Update-dish" class="book-a-table-btn scrollto d-none d-lg-flex">Update dish</a>
                   {% endif %}
                 </div>
             </div>

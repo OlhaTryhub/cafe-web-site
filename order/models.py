@@ -16,8 +16,10 @@ class OrderStatus(models.Model):
 class Order(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
     status = models.ForeignKey(to=OrderStatus, on_delete=models.DO_NOTHING)
+    dishes = models.ManyToManyField(to=Dish, through="OrderDish")
     making_datetime = models.DateTimeField()
-    total_amount = models.DecimalField(max_digits=4, decimal_places=2)
+    total_amount = models.PositiveIntegerField()
+    address = models.CharField(max_length=255, blank=True)
 
     def __str__(self) -> str:
         return (f"{self.id} Status: {self.status.name} "

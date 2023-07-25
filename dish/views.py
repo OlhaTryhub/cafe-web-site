@@ -1,8 +1,11 @@
-from django.http import HttpRequest
+from django.contrib.auth.decorators import login_required
+from django.http import HttpRequest, HttpResponseRedirect
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.views import generic
 
 from dish.models import Dish, DishType
+from order.views import add_dish_to_users_order
 
 
 def dish_type_view(request: HttpRequest, dish_type: str):
@@ -24,3 +27,8 @@ class DishDetailView(generic.DetailView):
     model = Dish
 
 
+@login_required
+def add_dish_to_users_order_view(request: HttpRequest,
+                            pk: int) -> HttpResponseRedirect:
+    _, dish_id = add_dish_to_users_order(request, pk)
+    return HttpResponseRedirect(reverse_lazy("dish:dish-detail", args=[dish_id]))

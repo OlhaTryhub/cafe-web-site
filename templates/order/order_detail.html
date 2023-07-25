@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}
+  <title>Order № {{ order.id }}</title>
+  {% endblock %}
+{% block content %}
+  <main id="main">
+  <section class="inner-page">
+  <p><div><br><br><br></div>
+
+  <div class="col-sm-6" style="margin: auto">
+  <section id="menu" class="menu section-bg" style="padding: 50px">
+  <div class="section-title"><h2>Order № {{ order.id }}</h2></div>
+    <table class="table table-dark" style="background-color: transparent">
+      <tr>
+        <th>Dish:</th>
+        <th style="text-align: center;">Price per dish</th>
+        <th style="text-align: center;">Count of dishes</th>
+      </tr>
+      {% for orderdish in order.orderdish_set.all %}
+        <tr>
+          <td>{{ orderdish.dish.name }}</td>
+          <td style="text-align: center;">{{ orderdish.dish.price }} UAH</td>
+          <td style="text-align: center;">{% if not order.address %}<a href="{% url 'order:order-detail-remove' pk=orderdish.dish.id %}">➖</a>{% endif %}   {{ orderdish.dish_count }}   {% if not order.address %}<a href="{% url 'order:order-detail-add' pk=orderdish.dish.id %}">➕</a>{% endif %}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    <div class="order-row">
+      <p><i>total amount:</i> <b>{{ order.total_amount }}</b> UAH</p>
+      <p><i>created at:</i> <b>{{ order.making_datetime.day }}-{{ order.making_datetime.month }}-{{ order.making_datetime.year }}, {{ order.making_datetime.hour }}:{{ order.making_datetime.minute }}</b></p>
+      <p><i>status:</i> <b>{{ order.status }}</b></p>
+    </div>
+  <div>
+    {% if not order.address %}
+      <form action="{% url 'order:confirm-order-by-user' pk=order.id %}" method="post">
+        {% csrf_token %}
+        <label for="address">Address for delivery:</label>
+        <input type="text" name="address" class="form-control" placeholder="Address...">
+        <input type="submit" value="Submit" class="book-a-table-btn scrollto d-none d-lg-flex" style="margin: auto">
+      </form>
+      {% else %}
+      <div class="order-row">
+        <p>Your order is in <b>{{ order.status.name }}</b> status. Thank you for order!</p>
+      </div>
+    {% endif %}
+  </div>
+  </section>
+  </div>
+  </section>
+  </main>
+{% endblock %}
