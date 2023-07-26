@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <main id="main">
+    <section class="inner-page">
+      <p><div><br><br><br></div>
+      <div class="col-sm-6" style="margin: auto">
+        <section id="menu" class="menu section-bg" style="padding: 50px">
+          <div class="section-title"><h2>confirm the deletion of the dish</h2></div>
+          <div class="row">
+            <h4>Are you sure that you want to delete dish {{ dish.name }}?</h4><br>
+              <form action="" method="post">
+                {% csrf_token %}
+                <input type="submit" value="Yes, delete" class="book-a-table-btn scrollto d-none d-lg-flex">
+              </form>
+              <a href="{% url 'dish:dish-detail' pk=dish.id %}">
+                <button class="button" name="food">No</button>
+              </a>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+{% endblock %}

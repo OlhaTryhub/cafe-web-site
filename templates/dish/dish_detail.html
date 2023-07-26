@@ -19,7 +19,6 @@
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-9 mt-4 mt-lg-0">
             <div class="tab-content">
-
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
                     <h3>Description</h3>
@@ -37,8 +36,8 @@
                   <a href="{% url 'dish:add-to-order' pk=dish.id %}" class="book-a-table-btn scrollto d-none d-lg-flex">Add to order</a>
                 {% endif %}
                   {% if user.is_superuser %}
-                    <a href="#delete-dish" class="book-a-table-btn scrollto d-none d-lg-flex">Delete dish</a>
-                    <a href="#Update-dish" class="book-a-table-btn scrollto d-none d-lg-flex">Update dish</a>
+                    <a href="{% url 'dish:dish-delete' pk=dish.id %}" class="book-a-table-btn scrollto d-none d-lg-flex">Delete dish</a>
+                    <a href="{% url 'dish:dish-update' pk=dish.id %}" class="book-a-table-btn scrollto d-none d-lg-flex">Update dish</a>
                   {% endif %}
                 </div>
             </div>

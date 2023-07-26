@@ -6,32 +6,31 @@
   <main id="main">
     <section class="inner-page">
       <div class="container">
-        <p>
-            <div>
-        <br>
-        <br>
-            </div>
-
+        <p><div><br><br></div>
           <section id="menu" class="menu section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Menu</h2>
-          <p>Our {{ section_name }}</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="menu-flters">
-              {% for type in type_list %}
-                <a href="{% url 'dish:dish-list' dish_type=type.name %}">
-                    <button type="submit" class="button" name="food" value="type.id">{{ type.name }}
-                  </button>
+            <div class="container" data-aos="fade-up">
+              {% if user.is_superuser %}
+                <a href="{% url 'dish:dish-create' %}" style="float: right; margin-right: 50px;">
+                  <button class="button">Add Dish</button>
                 </a>
-              {% endfor %}
-            </ul>
-          </div>
+              {% endif %}
+              <div class="section-title">
+                  <h2>Menu</h2>
+                  <p>Our {{ section_name }}</p>
         </div>
+
+              <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-12 d-flex justify-content-center">
+                  <ul id="menu-flters">
+                    {% for type in type_list %}
+                      <a href="{% url 'dish:dish-list' dish_type=type.name %}">
+                        <button type="submit" class="button" name="food" value="type.id">{{ type.name }}
+                        </button>
+                      </a>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
 
         <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
           {% for dish in dish_list %}
@@ -50,10 +49,9 @@
         </div>
 
       </div>
-    </section>
+          </section>
         </p>
       </div>
     </section>
-
   </main>
   {%  endblock %}

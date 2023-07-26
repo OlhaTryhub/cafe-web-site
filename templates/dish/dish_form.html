@@ -1,8 +1,32 @@
 {% extends "base.html" %}
 {% block title %}
-<title>Dish update</title>
-{% endblock %}
-
+  <title>{{ object|yesno:"Update ,Create" }}{{ dish.name }} dish</title>
+  {% endblock %}
 {% block content %}
-
+  <main id="main">
+    <section class="inner-page">
+      <p><div><br><br><br></div>
+      <div class="col-sm-6" style="margin: auto">
+        <section id="menu" class="menu section-bg" style="padding: 50px">
+          <div class="section-title"><h2>{{ object|yesno:"Update ,Create" }}{{ dish.name }} dish</h2></div>
+          <div>
+            <form action="" method="post">
+              {% csrf_token %}
+              <input type="text" name="name" class="form-control" placeholder="Name..." value="{{ dish.name }}">
+              <textarea name="description" class="form-control" rows="4" required="" id="id_description" placeholder="Description..." >{{ dish.description }}</textarea>
+              <input type="text" name="photo" class="form-control" placeholder="URL of image..." value="{{ dish.photo }}">
+              <label>Dish type:</label>
+              <select name="type" required="" id="id_type" class="form-control">
+                {% for type in dish_types %}
+                  <option value={{ type.id }} {% if type.id == dish.type.id %}selected{% endif %} >{{ type.name }}</option>
+                {% endfor %}
+              </select>
+              <input type="number" name="price" min="0" required="" id="id_price" class="form-control" placeholder="Price..." value="{{ dish.price }}">
+              <input type="submit" value="Submit" class="book-a-table-btn scrollto d-none d-lg-flex" style="margin: auto">
+            </form>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
 {% endblock %}

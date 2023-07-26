@@ -1747,3 +1747,9 @@ section {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s; }
+
+select.form-control:not(:focus),
+input.form-control:not(:focus),
+textarea.form-control:not(:focus) {
+        color: white !important;
+    }
