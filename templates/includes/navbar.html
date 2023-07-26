@@ -9,7 +9,7 @@
   <i class="bi bi-list mobile-nav-toggle"></i>
 </nav>
 {% if user.is_authenticated %}
-  <a href="#profile" class="nav-link scrollto">Hello, {{ user.username }}!</a>
+  <a href="{% url 'user:user-detail' %}" class="nav-link scrollto">Hello, {{ user.username }}!</a>
   <a href="{% url 'logout' %}" class="book-a-table-btn scrollto d-none d-lg-flex">Logout</a>
   <a href="{% url 'order:order-list' %}" class="book-a-table-btn scrollto d-none d-lg-flex">My orders</a>
 {% else %}

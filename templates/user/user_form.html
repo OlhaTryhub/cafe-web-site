@@ -8,7 +8,11 @@
 {% endif %}
 {% endblock %}
 {% block page_title %}
+{% if user.is_authenticated %}
+Update {{ user.username }}'s data
+{% else %}
 Registration
+{% endif %}
 {% endblock %}
 {% block form %}
   <form method="post" action="" novalidate>
@@ -19,15 +23,16 @@ Registration
           <p>{{ message }}</p>
         {% endfor %}
       {% endif %}
-      <input type="text" name="username" class="form-control" placeholder="Username" required>
+      <input type="text" name="username" class="form-control" placeholder="Username" value="{{ user.username }}">
     </div>
+  {% if not user.is_authenticated %}
     <div class="form-group">
       {% if form.errors.password1 %}
         {% for message in form.errors.password1 %}
           <p>{{ message }}</p>
         {% endfor %}
       {% endif %}
-      <input id="password-field1" class="form-control" type="password" name="password1" class="form-control" placeholder="Password" required>
+      <input id="password-field1" class="form-control" type="password" name="password1" class="form-control" placeholder="Password">
       <span toggle="#password-field1" class="fa fa-fw fa-eye field-icon toggle-password"></span>
     </div>
     <div class="form-group">
@@ -36,16 +41,17 @@ Registration
           <p>{{ message }}</p>
         {% endfor %}
       {% endif %}
-      <input id="password-field2" type="password" name="password2" class="form-control" placeholder="Confirm password" required>
+      <input id="password-field2" type="password" name="password2" class="form-control" placeholder="Confirm password">
       <span toggle="#password-field2" class="fa fa-fw fa-eye field-icon toggle-password"></span>
     </div>
+  {% endif %}
     <div class="form-group">
       {% if form.errors.first_name %}
         {% for message in form.errors.first_name %}
           <p>{{ message }}</p>
         {% endfor %}
       {% endif %}
-      <input type="text" name="first_name" class="form-control" placeholder="First name" required>
+      <input type="text" name="first_name" class="form-control" placeholder="First name" value="{{ user.first_name }}">
     </div>
     <div class="form-group">
       {% if form.errors.last_name %}
@@ -53,7 +59,7 @@ Registration
           <p>{{ message }}</p>
         {% endfor %}
       {% endif %}
-      <input type="text" name="last_name" class="form-control" placeholder="Last name" required>
+      <input type="text" name="last_name" class="form-control" placeholder="Last name" value="{{ user.last_name }}">
     </div>
     <div class="form-group">
       {% if form.errors.email %}
@@ -61,7 +67,7 @@ Registration
           <p>{{ message }}</p>
         {% endfor %}
       {% endif %}
-      <input type="text" name="email" class="form-control" placeholder="Email" required>
+      <input type="text" name="email" class="form-control" placeholder="E-mail" value="{{ user.email }}">
     </div>
     <div class="form-group">
       {% if form.errors.first_name %}
@@ -69,14 +75,22 @@ Registration
           <p>{{ message }}</p>
         {% endfor %}
       {% endif %}
-      <button type="submit" class="btn-book animated fadeInUp" value="Login">Registrate</button>
+      <button type="submit" class="btn-book animated fadeInUp" value="Login">
+        {% if not user.is_authenticated %}
+          Registrate
+        {% else %}
+          Confirm
+        {% endif %}
+      </button>
     </div>
   </form>
     <br>
+  {% if not user.is_authenticated %}
     <p class="mb-4 text-center">Already have an account?</p>
-  <div class="form-group">
-    <a href="{% url 'login' %}">
-      <button type="submit" class="btn-book animated fadeInUp scrollto">Login</button>
-    </a>
-  </div>
+    <div class="form-group">
+      <a href="{% url 'login' %}">
+        <button type="submit" class="btn-book animated fadeInUp scrollto">Login</button>
+      </a>
+    </div>
+  {% endif %}
 {% endblock %}

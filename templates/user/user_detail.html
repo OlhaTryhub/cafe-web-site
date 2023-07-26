@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="hero" class="d-flex align-items-center">
+  <div class="col-sm-6" style="margin: auto">
+  <section id="menu" class="menu section-bg">
+    <div class="col-sm-6" style="margin: auto">
+      <div class="section-title"><h2>User {{ user.username }} info</h2></div>
+      <table class="table table-dark" style="background-color: transparent">
+        <tr>
+          <td>Username:</td>
+          <th>{{ user.username }}</th>
+        </tr>
+        <tr>
+          <td>First name:</td>
+          <th>{{ user.first_name }}</th>
+        </tr>
+        <tr>
+          <td>Last name:</td>
+          <th>{{ user.last_name }}</th>
+        </tr>
+        <tr>
+          <td>E-mail::</td>
+          <th>{{ user.email }}</th>
+        </tr>
+      </table>
+      <a href="{% url 'user:user-update' pk=user.id %}">
+        <button class="button" name="food" style="margin: auto">Change info</button>
+      </a>
+    </div>
+  </section>
+  </div>
+</section>
+{% endblock %}
