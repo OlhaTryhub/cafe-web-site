@@ -58,7 +58,7 @@ class DishDeleteView(LoginRequiredMixin, generic.DeleteView):
         return reverse_lazy("dish:dish-list", args=[dish_type_name])
 
 
-class DishUpdateView(generic.UpdateView):
+class DishUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Dish
     fields = "__all__"
     template_name = "dish/dish_form.html"
