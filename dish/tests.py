@@ -60,5 +60,3 @@ class ModelsTests(TestCase):
 
         section_name = response.context["section_name"]
         self.assertEqual(section_name, "Breakfasts")
-
-
