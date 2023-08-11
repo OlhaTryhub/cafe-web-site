@@ -1,4 +1,9 @@
+asgiref==3.7.2
+black==23.7.0
+click==8.1.6
 colorama==0.4.6
+decouple==0.0.7
+dj-database-url==2.0.0
 Django==4.2.3
 django-filter==23.2
 mypy-extensions==1.0.0
@@ -11,3 +16,5 @@ sqlparse==0.4.4
 tomli==2.0.1
 typing_extensions==4.7.1
 tzdata==2023.3
+psycopg2==2.9.7
+whitenoise==6.5.0
