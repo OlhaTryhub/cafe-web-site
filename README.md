@@ -10,6 +10,11 @@ Django project for cafe named "Feeling Happy"
 
 [Cafe project deployed on Render](https://cafe-feeling-happy.onrender.com/)
 
+You can use test user credentials to see more functionality:
+- login: `test.user`
+- password: `InsequreTestPass123`
+
+
 ## Table of content
 
 - [Features](#features)
