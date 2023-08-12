@@ -8,7 +8,7 @@ Django project for cafe named "Feeling Happy"
 
 ## Check it out!
 
-[Cafe project deployed on Render](liiiiiiiiiiiiiiiiink)
+[Cafe project deployed on Render](https://cafe-feeling-happy.onrender.com/)
 
 ## Table of content
 
