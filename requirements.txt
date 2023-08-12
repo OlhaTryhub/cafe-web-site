@@ -18,3 +18,4 @@ typing_extensions==4.7.1
 tzdata==2023.3
 psycopg2==2.9.7
 whitenoise==6.5.0
+gunicorn==21.2.0
