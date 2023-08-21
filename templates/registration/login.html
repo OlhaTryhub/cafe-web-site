@@ -8,30 +8,30 @@
 Login
 {% endblock %}
 {% block form %}
-{% if next %}
-  <h3 class="mb-4 text-center">Please login to see this page.</h3>
-{% endif %}
-{% if form.errors %}
-  <p>Your username and password didn't match. Please try again.</p>
-{% endif %}
-<form method="post" action="" novalidate>
-  {% csrf_token %}
-  <div class="form-group">
-    <input type="text" name="username" class="form-control" placeholder="Username" required>
-  </div>
-  <div class="form-group">
-    <input id="password-field" type="password" name="password" class="form-control" placeholder="Password" required>
-    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-  </div>
-  <div class="form-group">
-    <button type="submit" class="btn-book animated fadeInUp scrollto" value="Login">Login</button>
-  </div>
-</form>
+  {% if next %}
+    <h3 class="mb-4 text-center">Please login to see this page.</h3>
+  {% endif %}
+  {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+  {% endif %}
+  <form method="post" action="" novalidate>
+    {% csrf_token %}
+    <div class="form-group">
+      <input type="text" name="username" class="form-control" placeholder="Username" required>
+    </div>
+    <div class="form-group">
+      <input id="password-field" type="password" name="password" class="form-control" placeholder="Password" required>
+      <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn-book animated fadeInUp scrollto" value="Login">Login</button>
+    </div>
+  </form>
   <br>
   <p class="mb-4 text-center">Don't have an account?</p>
-<div class="form-group">
-  <a href="{% url 'user:registration' %}">
-    <button type="submit" class="btn-book animated fadeInUp scrollto">Registration</button>
-  </a>
-</div>
+  <div class="form-group">
+    <a href="{% url 'user:registration' %}">
+      <button type="submit" class="btn-book animated fadeInUp scrollto">Registration</button>
+    </a>
+  </div>
 {% endblock %}
