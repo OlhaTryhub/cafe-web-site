@@ -1,23 +1,23 @@
 {% extends "base.html" %}
 
-  {% block content %}
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
-      <div class="row">
-        <div class="col-lg-8">
-          <h1>Welcome to <span>Feeling Happy</span></h1>
-          <h2>----------- Food and cocktails -----------</h2>
+{% block content %}
+<section id="hero" class="d-flex align-items-center">
+  <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1>Welcome to <span>Feeling Happy</span></h1>
+        <h2>----------- Food and cocktails -----------</h2>
 
-          <div class="btns">
-            <a href="{% url 'dish:dish-list' dish_type='Breakfasts'%}" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
-            {% if not user.is_authenticated %}
+        <div class="btns">
+          <a href="{% url 'dish:dish-list' dish_type='Breakfasts'%}" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
+          {% if not user.is_authenticated %}
             <a href="{% url 'login' %}" class="btn-book animated fadeInUp scrollto">Login</a>
-            {% else %}
-              <a href="{% url 'logout' %}" class="btn-book animated fadeInUp scrollto">Logout</a>
-            {% endif %}
-          </div>
+          {% else %}
+            <a href="{% url 'logout' %}" class="btn-book animated fadeInUp scrollto">Logout</a>
+          {% endif %}
         </div>
       </div>
     </div>
-  </section>
-  {%  endblock %}
+  </div>
+</section>
+{% endblock %}

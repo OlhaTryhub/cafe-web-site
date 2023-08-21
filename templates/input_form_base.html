@@ -5,41 +5,39 @@
     {% endblock %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  {% load static %}
-	<link href="{% static 'assets/css/style_login.css' %}" rel="stylesheet">
-
+	  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% load static %}
+	  <link href="{% static 'assets/css/style_login.css' %}" rel="stylesheet">
 	</head>
-	<section id="hero" class="d-flex align-items-center">
-	<section class="ftco-section">
-		<div class="container">
-    <div class="row justify-content-center">
-  <div class="col-md-6 text-center mb-5">
-    <h2 class="heading-section">
-      {% block page_title %}
-      {% endblock %}
-    </h2>
-  </div>
-</div>
-      <div class="row justify-content-center">
-        <div class="col-md-6 col-lg-4">
-          <div class="login-wrap p-0">
-      {% block form %}
-      {% endblock %}
+  <body>
+    <section id="hero" class="d-flex align-items-center">
+      <section class="ftco-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+              <h2 class="heading-section">
+                {% block page_title %}
+                {% endblock %}
+              </h2>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <div class="login-wrap p-0">
+                {% block form %}
+                {% endblock %}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-	</section>
+      </section>
     </section>
 
-	<script src="/static/assets/js/login/jquery.min.js"></script>
-  <script src="/static/assets/js/login/popper.js"></script>
-  <script src="/static/assets/js/login/bootstrap.min.js"></script>
-  <script src="/static/assets/js/login/main.js"></script>
+    <script src="/static/assets/js/login/jquery.min.js"></script>
+    <script src="/static/assets/js/login/popper.js"></script>
+    <script src="/static/assets/js/login/bootstrap.min.js"></script>
+    <script src="/static/assets/js/login/main.js"></script>
 
 	</body>
 </html>
