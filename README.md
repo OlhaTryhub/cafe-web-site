@@ -50,7 +50,10 @@ Python3 must be already installed
     ```bash
     pip install -r requirements.txt 
     ```
-5. Apply database migrations:
+5. Create your own .env file using given .env.sample.
+Don't forget to change variables values.
+After changing, you can set all this env variables on your machine using [python-dotenv](https://pypi.org/project/python-dotenv/) module.
+6. Apply database migrations:
     ```bash
     python manage.py migrate
     ```
